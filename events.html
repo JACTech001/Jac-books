@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JAC Bookstore | Events</title>
+  <link rel="stylesheet" href="events.css">
+</head>
+<body>
+  <header>
+    <h1>JAC Bookstore Events</h1>
+    <p>Join us for engaging events that connect readers and authors.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bookpage.html">Books</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <div class="event-card">
+        <h3>Book Signing with John Doe</h3>
+        <p>Date: January 20, 2024</p>
+        <p>Time: 2:00 PM - 4:00 PM</p>
+        <p>Location: JAC Bookstore Main Branch</p>
+        <button onclick="registerEvent('Book Signing with John Doe')">Register</button>
+      </div>
+
+      <div class="event-card">
+        <h3>Virtual Reading Session</h3>
+        <p>Date: February 5, 2024</p>
+        <p>Time: 6:00 PM - 7:30 PM</p>
+        <p>Location: Online (Zoom)</p>
+        <button onclick="registerEvent('Virtual Reading Session')">Register</button>
+      </div>
+
+      <div class="event-card">
+        <h3>Author Panel Discussion</h3>
+        <p>Date: March 10, 2024</p>
+        <p>Time: 3:00 PM - 5:00 PM</p>
+        <p>Location: JAC Bookstore Conference Hall</p>
+        <button onclick="registerEvent('Author Panel Discussion')">Register</button>
+      </div>
+    </section>
+
+    <section id="past-events">
+      <h2>Past Events</h2>
+      <ul>
+        <li>November 2023: Poetry Slam Night</li>
+        <li>October 2023: Children's Storytime</li>
+        <li>September 2023: Launch of "Inspiring Minds" Anthology</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact Us: <a href="mailto:events@jacbookstore.com">events@jacbookstore.com</a></p>
+    <p>&copy; 2024 JAC Bookstore. All rights reserved.</p>
+  </footer>
+
+  <script src="events.js"></script>
+</body>
+</html>

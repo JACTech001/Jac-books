@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookCast | Podcast</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-600">BookCast</h1>
+      <nav>
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3">Home</a>
+        <a href="podcast.html" class="text-indigo-600 font-semibold px-3">Podcast</a>
+        <a href="community.html" class="text-gray-700 hover:text-indigo-600 px-3">Community</a>
+        <a href="/contact" class="text-gray-700 hover:text-indigo-600 px-3">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4 py-12">
+    <section class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold mb-4">🎙️ BookCast: Your Book Talk Companion</h2>
+      <p class="text-lg text-gray-600">Tune in weekly as we discuss trending novels, interview authors, and explore reader stories from around the world.</p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-8">
+      <!-- Example podcast episode card -->
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">Ep. 01 - Why We Read</h3>
+        <p class="text-gray-600 mb-4">Explore the psychology of reading and what makes books so irresistible to humans. Featuring Prof. Lara Okoro.</p>
+        <audio controls class="w-full mb-2">
+          <source src="path-to-episode-1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <span class="text-sm text-gray-400">Released: March 5, 2025</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-bold mb-2">Ep. 02 - Nigerian Authors on the Rise</h3>
+        <p class="text-gray-600 mb-4">We chat with upcoming Nigerian writers breaking into the global scene.</p>
+        <audio controls class="w-full mb-2">
+          <source src="path-to-episode-2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <span class="text-sm text-gray-400">Released: March 12, 2025</span>
+      </div>
+
+      <!-- Add more episodes below... -->
+    </section>
+  </main>
+
+  <footer class="bg-white shadow mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-500">
+      © 2025 BookCast by PrimeTech Enterprises. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+// podcast.js
+
+document.addEventListener("DOMContentLoaded", () => {
+    const podcastCards = document.querySelectorAll(".podcast-card button");
+
+    podcastCards.forEach(button => {
+        button.addEventListener("click", (event) => {
+            const card = event.target.closest(".podcast-card");
+            const title = card.querySelector("h2").textContent;
+            alert(`Now playing: ${title}`);
+        });
+    });
+
+    // Dynamic podcast list loading
+    const podcastSection = document.querySelector(".podcast-section");
+    const podcasts = [
+        {
+            title: "Tech Trends",
+            description: "Explore the latest in technology and innovation.",
+            image: "tech-trends.jpg",
+        },
+        {
+            title: "Code Talks",
+            description: "Insights from developers around the world.",
+            image: "code-talks.jpg",
+        },
+        {
+            title: "Startup Stories",
+            description: "Journey through the world of entrepreneurship.",
+            image: "startup-stories.jpg",
+        },
+    ];
+
+    podcasts.forEach(podcast => {
+        const card = document.createElement("div");
+        card.className = "podcast-card";
+
+        card.innerHTML = `
+            <img src="${podcast.image}" alt="${podcast.title}">
+            <div class="podcast-info">
+                <h2>${podcast.title}</h2>
+                <p>${podcast.description}</p>
+                <button>Play</button>
+            </div>
+        `;
+
+        podcastSection.appendChild(card);
+    });
+});
+
+
+  </script>
+
+</body>
+</html>

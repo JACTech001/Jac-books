@@ -1,0 +1,92 @@
+/* podcast.css */
+
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Podcast Section */
+main {
+    padding: 2rem;
+}
+
+.podcast-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.podcast-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 2rem);
+    display: flex;
+    flex-direction: column;
+}
+
+.podcast-card img {
+    width: 100%;
+    height: auto;
+}
+
+.podcast-card .podcast-info {
+    padding: 1rem;
+    flex: 1;
+}
+
+.podcast-card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.podcast-card p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.podcast-card button {
+    margin-top: auto;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.podcast-card button:hover {
+    background-color: #45a049;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

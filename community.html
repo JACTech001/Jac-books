@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BookCast Community</title>
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+  <header>
+    <h1>📚 BookCast Community</h1>
+    <p>Welcome! Join the discussion, share your thoughts, and discover great reads.</p>
+ 
+    <div>
+      <nav>
+        <a href="index.html" class="text-gray-700 hover:text-indigo-600 px-3">Home</a>
+        <a href="podcast.html" class="text-indigo-600 font-semibold px-3">Podcast</a>
+        <a href="/contact" class="text-gray-700 hover:text-indigo-600 px-3">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="post-form">
+      <h2>Start a Discussion</h2>
+      <form id="postForm">
+        <input type="text" id="username" placeholder="Your Name" required />
+        <input type="text" id="title" placeholder="Discussion Title" required />
+        <textarea id="content" placeholder="What's on your mind?" rows="4" required></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+
+    <section id="posts">
+      <h2>Community Discussions</h2>
+      <!-- Posts will appear here -->
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 primetech.inc | All Rights Reserved.
+  </footer>
+
+  <script>
+
+const postForm = document.getElementById('postForm');
+const postsSection = document.getElementById('posts');
+
+postForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const username = document.getElementById('username').value.trim();
+  const title = document.getElementById('title').value.trim();
+  const content = document.getElementById('content').value.trim();
+
+  if (username && title && content) {
+    const post = document.createElement('div');
+    post.className = 'post';
+
+    post.innerHTML = `
+      <h3>${title}</h3>
+      <p><strong>${username}</strong> says:</p>
+      <p>${content}</p>
+    `;
+
+    postsSection.appendChild(post);
+    postForm.reset();
+  }
+});
+
+
+  </script>
+
+
+
+</body>
+</html>

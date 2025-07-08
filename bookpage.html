@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books | JAC BOOKSTORE</title>
+  <link rel="stylesheet" href="bookpage.css">
+</head>
+<body>
+  <header>
+    <h1>JAC BOOKSTORE</h1>
+    <p>Books that inspire, books that empower; Where every page comes alive</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bookpage.html">Books</a></li>
+      <li><a href="podcast.html">Podcast</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main> 
+    <section id="books-list" >
+      <section id="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a book..." onkeyup="searchBooks(event)">
+        <button onclick="searchBooks()">Search</button>
+      </section>
+      
+      <h2>Our Books</h2>
+      <div class="book-card">
+        <img src="images/the-sheikh-ceo.jpg" alt="The Sheikh CEO">
+        <h3>The Sheikh CEO</h3>
+        <p>$15.00</p>
+        <button onclick="purchaseBook('The Sheikh CEO', 15.00)">Purchase</button>
+      </div>
+      
+      <div class="book-card">
+        <img src="images/How to win customers and keep them for life.jpg" alt="How to Win Customers">
+        <h3>How to Win Customers</h3>
+        <p>$12.00</p>
+        <button onclick="purchaseBook('How to Win Customers', 12.00)">Purchase</button>
+      </div>
+      
+      <div class="book-card">
+        <img src="images/the-5-am-club_0000.jpg" alt="The 5 AM Club">
+        <h3>The 5 AM Club</h3>
+        <p>$20.00</p>
+        <button onclick="purchaseBook('The 5 AM Club', 20.00)">Purchase</button>
+      </div>
+      
+      <div class="book-card">
+        <img src="images/Hyperfocus.webp" alt="Hyperfocus">
+        <h3>Hyperfocus</h3>
+        <p>$18.00</p>
+        <button onclick="purchaseBook('Hyperfocus', 18.00)">Purchase</button>
+      </div>
+      
+      <div class="book-card">
+        <img src="images/The-80-20-Principle.png" alt="The 80/20 Principle">
+        <h3>The 80/20 Principle</h3>
+        <p>$10.00</p>
+        <button onclick="purchaseBook('The 80/20 Principle', 10.00)">Purchase</button>
+      </div>
+
+      <div class="book-card">
+        <img src="images/how-to-do-the-work.webp" alt="how to do the work">
+        <h3>how to do the work</h3>
+        <p>$10.00</p>
+        <button onclick="purchaseBook('how to do the work', 30.00)">Purchase</button>
+      </div>
+
+      <div class="book-card">
+        <img src="images/trust your self.jpg" alt="trust your self,">
+        <h3>trust your self</h3>
+        <p>$10.00</p>
+        <button onclick="purchaseBook('trust your self', 20.00)">Purchase</button>
+      </div>
+
+      <div class="book-card">
+        <img src="images/self compassion.jpg" alt="self compassion">
+        <h3>self compassion</h3>
+        <p>$10.00</p>
+        <button onclick="purchaseBook('self compassion', 80.00)">Purchase</button>
+      </div>
+
+      <div class="book-card">
+        <img src="images/self-help.jpg" alt="self help">
+        <h3>self help</h3>
+        <p>$10.00</p>
+        <button onclick="purchaseBook('self help', 10.00)">Purchase</button>
+      </div>
+      
+      <div class="book-card">
+        <img src="images/Seduction.jpg" alt="Seduction">
+        <h3>Seduction</h3>
+        <p>$25.00</p>
+        <button onclick="purchaseBook('Seduction', 25.00)">Purchase</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact Us: <a href="mailto:info@unisupport.com">info@unisupport.com</a></p>
+    <p1>&copy; JAC BOOKSTORE - 2025</p1><br>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Service</a>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- JavaScript for purchase prompt -->
+  <script>
+
+function searchBooks(event) {
+    if (event.type === "click" || event.key === "Enter") {
+        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+        const bookCards = document.querySelectorAll(".book-card");
+
+        bookCards.forEach(card => {
+            const title = card.getAttribute("data-title").toLowerCase();
+            if (title.includes(searchInput)) {
+                card.style.display = "block";  // Show book if it matches search
+            } else {
+                card.style.display = "none";   // Hide book if it doesn't match
+            }
+        });
+    }
+}
+
+
+
+    function purchaseBook(bookTitle, bookPrice) {
+    const confirmation = confirm(`Would you like to purchase "${bookTitle}" for $${bookPrice}?`);
+    if (confirmation) {
+        const purchaserEmail = prompt("Please enter your email to receive a purchase confirmation:");
+
+        if (purchaserEmail) {
+            // Simulated email content
+            const emailContent = `
+                Dear Customer,
+
+                Thank you for your Order of "${bookTitle}" from JAC Bookstore. 
+                Your order total is $${bookPrice.toFixed(2)}.
+
+                Your order is being processed, and you will receive updates regarding payment and shipping in Your email soon.
+
+                If you have any questions, feel free to contact us at info@unisupport.com.
+
+                Best Regards,
+                JAC Bookstore Team
+            `;
+
+            // Display the email content to the purchaser (simulating an email sent)
+            alert(`Email sent to ${purchaserEmail}:\n\n${emailContent}`);
+            console.log(`Email to ${purchaserEmail}:\n${emailContent}`);
+        } else {
+            alert("Purchase cancelled: No email entered.");
+        }
+    } else {
+        alert("Purchase cancelled.");
+    }
+}
+
+  </script>
+</body>
+</html>

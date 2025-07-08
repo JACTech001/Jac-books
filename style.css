@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    /*background-image: url('images/bkg\ prof.jpeg'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+  }
+  
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+ 
+  
+  h1 {
+    font-size: 3.8em;
+    margin-bottom: 5px;
+    color: rgb(60, 32, 218);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+  }
+
+  h1 img {
+    width: 250px;
+    height: 250px;
+  }
+
+  p {
+    font-size: 0.8em;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  nav {
+    background-color: #080000;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #ce7a0d;
+
+  }
+  
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(247, 234, 234);
+  }
+
+
+  /* Social media links */
+.social-media {
+  margin-right: 18px;
+  text-align: right;
+  padding-right: 50px;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.social-media img {
+  width: 25px; /* Adjust the size of the social media icons as needed */
+  height: auto;
+  
+}
+
+  
+  main {
+    padding: 50px;
+  }
+  
+  .banner {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: monospace;
+    font-size: 1.8em;
+    
+  }
+
+  
+.btn {
+    display: inline-block;
+    background-color: #f1a307;
+    color: #0c0101;
+    padding: 0.5rem 1.1rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: #0f03b1;
+}
+ .hero-content {
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 50px;
+    
+ }
+
+ .hero-content a {
+    color: blue;
+
+ }
+
+ .hero-content img {
+    width: 70px;
+    height: 70px;
+ }
+
+  .carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide 10s infinite ease-in-out;
+  }
+  
+  .carousel img {
+    width: 150px;
+    display: inline-block;
+    animation: fade 5s infinite alternate ease-in-out;
+  }
+  
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+  }
+  
+  @keyframes fade {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+  }
+  
+  /* Styles for staff picks section */
+#staff-picks {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin: 1.5rem;
+}
+
+#staff-picks h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.0rem;
+  color: #010702;
+  font-family: fantasy;
+}
+
+.book-card {
+  display: inline-block;
+  background: rgb(233, 232, 230);
+  margin: 1rem;
+  padding: 0.1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.book-card img {
+  width: 100px;
+  height: 120px;
+  border-radius: 5px 5px 0 0;
+}
+
+.book-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem 0;
+  color: #0e0101;
+}
+
+.book-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.book-card:hover {
+  transform: scale(1.05);
+}
+
+
+/* Styles for Media Section */
+#media-section {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #030303;
+  border-radius: 10px;
+}
+
+#media-section h2 {
+  font-size: 2rem;
+  color: #e2c105;
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.media-container {
+  margin: 20px auto;
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+}
+
+.media-container h3 {
+  font-size: 1.5rem;
+  color: #dbaa09;
+}
+
+#media-section audio,
+#media-section video {
+  margin-top: 10px;
+  border: 2px solid #0d02a0;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+#media-section button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #0d02a0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#media-section button:hover {
+  background-color: #f1a307;
+}
+
+
+
+/* Custom Button Styles */
+.custom-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #c08e05, #0619c4);
+  
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.custom-button:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.custom-button:active {
+  transform: scale(1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+  .blog-teasers {
+    color: #070000;
+    padding: 30px;
+    font-size: 15px;
+    font-family: fantasy;
+  }
+
+  .blog-teasers li a {
+    color: #e00b0b;
+    font-size: 14px;
+    font-family: fantasy;
+  }
+  .blog-teasers li b {
+    margin-left: 800px;
+  }
+ 
+  footer {
+    background-color: #030000;
+    text-align: center;
+    padding: 10px;
+    font
+  }
+
+   p1 {
+    color: White;
+    font-family: fantasy;
+  }
+  
+  
+  footer p {
+    margin-bottom: 10px;
+    color: lightblue;
+  }
+  
+  footer .social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    ma
+  }
+  
+  
+  
+  footer a {
+    color: orange; /* Blue */
+    text-decoration: none;
+    font: 
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
